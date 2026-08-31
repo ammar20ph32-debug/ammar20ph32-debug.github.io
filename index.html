@@ -19,8 +19,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GiftXCard — بطاقتك. مالك. خلال دقائق.">
 <meta name="twitter:description" content="فحص آلي خلال ثوانٍ · سعرك واضح قبل الإرسال · تحويل بنكي أو محفظة رقمية مع إيصال.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230071e3'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='white' text-anchor='middle'>G</text></svg>">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230071e3'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='white' text-anchor='middle'>G</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230071e3'/><g fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'><path d='M50 0V100'/><path d='M0 49.4H100'/><path d='M48.6 49.6C45.6 38.8 44.4 31.4 38.2 29.4C30.4 26.9 25.4 32.6 26.9 39.8C28.3 46.3 36 48.4 48.6 49.6Z'/><path d='M51.4 49.6C54.4 38.8 55.6 31.4 61.8 29.4C69.6 26.9 74.6 32.6 73.1 39.8C71.7 46.3 64 48.4 51.4 49.6Z'/><path d='M48.5 51.5 35.7 65.8'/><path d='M51.5 51.5 67.3 69.8'/></g></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230071e3'/><g fill='none' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'><path d='M50 0V100'/><path d='M0 49.4H100'/><path d='M48.6 49.6C45.6 38.8 44.4 31.4 38.2 29.4C30.4 26.9 25.4 32.6 26.9 39.8C28.3 46.3 36 48.4 48.6 49.6Z'/><path d='M51.4 49.6C54.4 38.8 55.6 31.4 61.8 29.4C69.6 26.9 74.6 32.6 73.1 39.8C71.7 46.3 64 48.4 51.4 49.6Z'/><path d='M48.5 51.5 35.7 65.8'/><path d='M51.5 51.5 67.3 69.8'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
@@ -165,11 +165,11 @@ html[dir="rtl"] .arrow-link:hover::after{transform:translateX(-3px);}
 }
 .brand:hover{text-decoration:none;}
 .brand-mark{
-  width:26px; height:26px; border-radius:7px; flex:none;
+  width:27px; height:27px; border-radius:7px; flex:none;
   background:var(--accent); color:#fff;
-  display:grid; place-items:center; font-size:15px; font-weight:700;
-  font-family:var(--font-latin);
+  display:block; overflow:hidden;
 }
+.brand-mark svg{width:100%; height:100%; display:block;}
 .nav-links{display:flex; align-items:center; gap:4px; margin-inline:auto;}
 .nav-links a{
   color:var(--ink); font-size:14px; font-weight:400; opacity:.85;
@@ -529,10 +529,24 @@ html[lang="ar"] .gcard .cap{font-family:var(--font-arabic); letter-spacing:norma
 <body>
 <a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
 
+<!-- brand mark: ribbon and bow, drawn once and referenced wherever the logo appears -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="gxc-mark" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 0V100"/>
+      <path d="M0 49.4H100"/>
+      <path d="M48.6 49.6C45.6 38.8 44.4 31.4 38.2 29.4C30.4 26.9 25.4 32.6 26.9 39.8C28.3 46.3 36 48.4 48.6 49.6Z"/>
+      <path d="M51.4 49.6C54.4 38.8 55.6 31.4 61.8 29.4C69.6 26.9 74.6 32.6 73.1 39.8C71.7 46.3 64 48.4 51.4 49.6Z"/>
+      <path d="M48.5 51.5 35.7 65.8"/>
+      <path d="M51.5 51.5 67.3 69.8"/>
+    </g>
+  </symbol>
+</svg>
+
 <!-- ══════════ navigation ══════════ -->
 <header class="nav">
   <nav class="nav-inner" aria-label="Main">
-    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">G</span>GiftXCard</a>
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg><use href="#gxc-mark"/></svg></span>GiftXCard</a>
 
     <div class="nav-links" id="navLinks">
       <a href="#how" data-i18n="nav.how">كيف يعمل</a>
@@ -828,7 +842,7 @@ html[lang="ar"] .gcard .cap{font-family:var(--font-arabic); letter-spacing:norma
 <footer class="foot">
   <div class="wrap wrap-wide">
     <div class="foot-top">
-      <span class="foot-brand"><span class="brand-mark" aria-hidden="true">G</span>GiftXCard</span>
+      <span class="foot-brand"><span class="brand-mark" aria-hidden="true"><svg><use href="#gxc-mark"/></svg></span>GiftXCard</span>
       <nav class="foot-nav" aria-label="Footer">
         <a href="#how" data-i18n="nav.how">كيف يعمل</a>
         <a href="#cards" data-i18n="nav.cards">البطاقات</a>
