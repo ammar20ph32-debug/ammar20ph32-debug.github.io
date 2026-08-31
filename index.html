@@ -2,386 +2,1099 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GiftXCard — بِع بطاقات آيتونز ورايزر واستلم فلوسك</title>
-<meta name="description" content="بِع بطاقات آيتونز ورايزر بأفضل سعر. فحص آلي خلال ثوانٍ، سعرك أمامك قبل الإرسال، وتحويل بنكي أو USDT مع إيصال.">
-<meta name="theme-color" content="#17101d">
-<meta property="og:title" content="GiftXCard — بِع بطاقاتك واستلم فلوسك">
-<meta property="og:description" content="فحص آلي خلال ثوانٍ · سعرك أمامك قبل الإرسال · تحويل بنكي أو USDT مع إيصال.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GiftXCard — بِع بطاقات آيتونز ورايزر واستلم مالك</title>
+<meta name="description" content="بِع بطاقات آيتونز ورايزر جولد بأفضل سعر. فحص آلي خلال ثوانٍ، سعرك واضح قبل الإرسال، وتحويل بنكي أو USDT مع إيصال لكل دفعة.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://giftxcard.me/">
+<meta property="og:site_name" content="GiftXCard">
+<meta property="og:title" content="GiftXCard — بطاقتك. مالك. خلال دقائق.">
+<meta property="og:description" content="فحص آلي خلال ثوانٍ · سعرك واضح قبل الإرسال · تحويل بنكي أو USDT مع إيصال.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+<meta property="og:url" content="https://giftxcard.me/">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GiftXCard — بطاقتك. مالك. خلال دقائق.">
+<meta name="twitter:description" content="فحص آلي خلال ثوانٍ · سعرك واضح قبل الإرسال · تحويل بنكي أو USDT مع إيصال.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230071e3'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='white' text-anchor='middle'>G</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230071e3'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='white' text-anchor='middle'>G</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <style>
+/* ═══════════════════════════════════════════════════════════
+   GiftXCard — design tokens
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#ffffff;
+  --bg-alt:#fbfbfd;
+  --surface:#f5f5f7;
+  --surface-2:#ffffff;
+  --ink:#1d1d1f;
+  --ink-2:#6e6e73;
+  --ink-3:#86868b;
+  --line:rgba(0,0,0,.10);
+  --line-soft:rgba(0,0,0,.06);
+  --accent:#0071e3;
+  --accent-hover:#0077ed;
+  --accent-link:#0066cc;
+  --on-accent:#ffffff;
+  --nav-bg:rgba(251,251,253,.72);
+  --card-shadow:0 4px 24px rgba(0,0,0,.06);
+  --card-shadow-hi:0 18px 48px -18px rgba(0,0,0,.24);
+  --success:#1d8a4e;
+
+  --font-latin:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-arabic:"IBM Plex Sans Arabic",-apple-system,BlinkMacSystemFont,"SF Arabic","Segoe UI","Noto Sans Arabic",Tahoma,Arial,sans-serif;
+  --font:var(--font-arabic);
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
+  --wrap:1024px;
+  --wrap-wide:1240px;
+  --nav-h:52px;
+  --radius:22px;
+  --radius-lg:28px;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html[lang="en"]{--font:var(--font-latin);}
+
+@media (prefers-color-scheme: dark){
   :root{
-    --void:#17101d; --panel:#211829; --panel-2:#2a1f34;
-    --silver:#d9d3e0; --silver-dim:#948aa2; --line:#382a45;
-    --gold:#e8b464; --gold-deep:#b8823c; --mint:#79c79b;
-    --ar:"Segoe UI","Noto Naskh Arabic","Geeza Pro",Tahoma,Arial,sans-serif;
-    --mono:ui-monospace,"SFMono-Regular","Consolas","Liberation Mono",monospace;
-    --wrap:1080px;
+    --bg:#000000;
+    --bg-alt:#000000;
+    --surface:#1d1d1f;
+    --surface-2:#161617;
+    --ink:#f5f5f7;
+    --ink-2:#a1a1a6;
+    --ink-3:#86868b;
+    --line:rgba(255,255,255,.14);
+    --line-soft:rgba(255,255,255,.08);
+    --accent:#0071e3;
+    --accent-hover:#0077ed;
+    --accent-link:#2997ff;
+    --nav-bg:rgba(0,0,0,.72);
+    --card-shadow:0 4px 24px rgba(0,0,0,.5);
+    --card-shadow-hi:0 18px 48px -18px rgba(0,0,0,.8);
+    --success:#30d158;
   }
-  *{box-sizing:border-box;}
-  html{background:var(--void); scroll-behavior:smooth;}
-  body{
-    margin:0; direction:rtl; background:var(--void); color:var(--silver);
-    font-family:var(--ar); font-size:17px; line-height:1.9;
-    -webkit-text-size-adjust:100%; overflow-x:hidden;
-  }
-  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 22px;}
-  a{color:var(--gold);}
-  h1,h2,h3{text-wrap:balance; margin:0;}
+}
 
-  /* ── نداء الفعل ───────────────────────────────────────────── */
-  .cta{
-    display:inline-flex; align-items:center; gap:11px;
-    background:linear-gradient(160deg,var(--gold),var(--gold-deep));
-    color:#241703; font-weight:800; font-size:19px; text-decoration:none;
-    padding:16px 34px; border-radius:3px; border:1px solid #f2c887;
-    box-shadow:0 10px 30px -12px rgba(232,180,100,.55);
-    transition:transform .16s ease, box-shadow .16s ease;
-  }
-  .cta:hover{transform:translateY(-2px); box-shadow:0 16px 36px -12px rgba(232,180,100,.7);}
-  .cta:focus-visible{outline:3px solid var(--gold); outline-offset:4px;}
-  .cta svg{width:22px; height:22px; flex:none;}
-  .cta-note{display:block; margin-top:12px; font-size:14.5px; color:var(--silver-dim);}
+/* ═══ base ═══ */
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 20px);}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--font); font-size:17px; line-height:1.55;
+  font-weight:400; letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;}
+h1,h2,h3,h4{margin:0; font-weight:600; letter-spacing:-.02em; line-height:1.09; text-wrap:balance;}
+p{margin:0;}
+a{color:var(--accent-link); text-decoration:none;}
+a:hover{text-decoration:underline;}
+:focus-visible{outline:2.5px solid var(--accent-link); outline-offset:3px; border-radius:6px;}
+::selection{background:rgba(0,113,227,.24);}
 
-  /* ── الترويسة ─────────────────────────────────────────────── */
-  header.top{
-    position:sticky; top:0; z-index:40; backdrop-filter:blur(10px);
-    background:rgba(23,16,29,.86); border-bottom:1px solid var(--line);
-  }
-  header.top .wrap{display:flex; align-items:center; gap:16px; padding-block:13px;}
-  .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:#fff;}
-  .brand .mk{
-    width:26px; height:26px; border-radius:3px; flex:none;
-    background:linear-gradient(150deg,var(--gold),var(--gold-deep));
-    display:grid; place-items:center; color:#241703; font-size:14px; font-weight:900;
-  }
-  header.top .sp{margin-inline-start:auto;}
-  .cta.sm{font-size:15px; padding:9px 18px;}
-  @media(max-width:520px){.cta.sm{padding:8px 14px; font-size:14px;} .brand{font-size:16px;}}
+.wrap{width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:22px;}
+.wrap-wide{max-width:var(--wrap-wide);}
+.skip{
+  position:absolute; inset-block-start:-100px; inset-inline-start:16px; z-index:200;
+  background:var(--accent); color:var(--on-accent); padding:12px 20px;
+  border-radius:12px; font-size:15px; font-weight:600;
+}
+.skip:focus{inset-block-start:12px; text-decoration:none;}
 
-  /* ── البطل ────────────────────────────────────────────────── */
-  .hero{position:relative; padding:74px 0 66px; overflow:hidden;}
-  .hero::before{
-    content:""; position:absolute; inset:-40% -20% auto -20%; height:620px;
-    background:radial-gradient(60% 60% at 70% 30%, rgba(232,180,100,.16), transparent 70%);
-    pointer-events:none;
-  }
-  .hero .wrap{position:relative; display:grid; grid-template-columns:1.15fr .85fr;
-              gap:52px; align-items:center;}
-  .eyebrow{
-    display:inline-block; font-size:12.5px; letter-spacing:.15em; font-weight:700;
-    color:var(--gold); border:1px solid var(--line); border-radius:2px;
-    padding:5px 12px; margin-bottom:22px;
-  }
-  .hero h1{font-size:clamp(34px,5.6vw,58px); line-height:1.22; font-weight:800; color:#fff;
-           letter-spacing:-.02em;}
-  .hero h1 em{font-style:normal; color:var(--gold);}
-  .hero p.lead{font-size:19.5px; color:var(--silver); margin:20px 0 30px; max-width:44ch;}
-  @media(max-width:880px){
-    .hero .wrap{grid-template-columns:1fr; gap:44px;}
-    .hero{padding:52px 0 48px;}
-  }
+/* ═══ typography scale ═══ */
+.t-hero{font-size:clamp(40px,7.2vw,80px); font-weight:700; letter-spacing:-.035em; line-height:1.05;}
+.t-sec{font-size:clamp(30px,4.6vw,52px); font-weight:600; letter-spacing:-.028em; line-height:1.08;}
+.t-sub{font-size:clamp(18px,2.1vw,23px); color:var(--ink-2); font-weight:400; line-height:1.45; letter-spacing:-.008em;}
+.eyebrow{
+  display:inline-block; font-size:13px; font-weight:600; letter-spacing:.02em;
+  color:var(--accent-link); margin-bottom:14px;
+}
+.lede{font-size:19px; color:var(--ink-2); line-height:1.55; max-width:62ch;}
 
-  /* ── بطاقة الكشط ──────────────────────────────────────────── */
-  .card-stage{display:grid; place-items:center;}
-  .gcard{
-    position:relative; width:min(340px,88vw); aspect-ratio:1.586/1;
-    border-radius:14px; padding:22px; color:#fff; isolation:isolate;
-    background:
-      linear-gradient(150deg,#3a2b48 0%,#241a2e 55%,#191220 100%);
-    border:1px solid #46335a;
-    box-shadow:0 26px 60px -22px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.06);
-    transform:rotate(-3deg);
-  }
-  .gcard .chip{
-    width:42px; height:31px; border-radius:5px;
-    background:linear-gradient(140deg,#f0cf94,#b8823c 60%,#8c5f26);
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.25);
-  }
-  .gcard .label{margin-top:16px; font-size:12.5px; letter-spacing:.18em;
-                color:var(--silver-dim); font-weight:700;}
-  .gcard .title{font-size:22px; font-weight:800; margin-top:2px;}
-  .scratch{
-    position:absolute; inset-inline:22px; bottom:22px; height:74px;
-    border-radius:7px; overflow:hidden; background:#120c18;
-    border:1px solid #3d2c4d;
-  }
-  .scratch .under{
-    position:absolute; inset:0; display:grid; place-items:center; gap:2px;
-    font-family:var(--mono); font-size:23px; font-weight:800; color:var(--gold);
-    letter-spacing:.06em; text-align:center; line-height:1.25;
-  }
-  .scratch .under small{display:block; font-family:var(--ar); font-size:12.5px;
-                        color:var(--silver-dim); letter-spacing:0; font-weight:600;}
-  .scratch canvas{position:absolute; inset:0; width:100%; height:100%;
-                  cursor:grab; touch-action:none; display:none;}
-  .scratch canvas.on{display:block;}
-  .hint{margin-top:16px; font-size:13.5px; color:var(--silver-dim); text-align:center;}
+/* ═══ buttons ═══ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  background:var(--accent); color:var(--on-accent);
+  font-family:inherit; font-size:17px; font-weight:500; letter-spacing:-.01em;
+  padding:13px 26px; border:0; border-radius:980px; cursor:pointer;
+  text-decoration:none; white-space:nowrap;
+  transition:background .2s var(--ease), transform .2s var(--ease);
+}
+.btn:hover{background:var(--accent-hover); text-decoration:none; transform:translateY(-1px);}
+.btn:active{transform:translateY(0);}
+.btn svg{width:19px; height:19px; flex:none;}
+.btn-ghost{
+  background:transparent; color:var(--accent-link);
+  border:1px solid currentColor; padding:12px 25px;
+}
+.btn-ghost:hover{background:color-mix(in srgb, var(--accent-link) 8%, transparent);}
+.btn-sm{font-size:14px; padding:8px 17px;}
+.arrow-link{
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:19px; color:var(--accent-link); font-weight:400;
+}
+.arrow-link:hover{text-decoration:underline;}
+.arrow-link::after{content:"›"; font-size:1.25em; line-height:0; transition:transform .2s var(--ease);}
+html[dir="rtl"] .arrow-link::after{content:"‹";}
+.arrow-link:hover::after{transform:translateX(3px);}
+html[dir="rtl"] .arrow-link:hover::after{transform:translateX(-3px);}
 
-  /* ── الأقسام ──────────────────────────────────────────────── */
-  section{padding:66px 0; border-top:1px solid var(--line);}
-  .sechead{margin-bottom:34px;}
-  .sechead h2{font-size:clamp(25px,3.4vw,34px); font-weight:800; color:#fff;}
-  .sechead p{margin:10px 0 0; color:var(--silver-dim); font-size:17px; max-width:56ch;}
+/* ═══ navigation ═══ */
+.nav{
+  position:sticky; top:0; z-index:100; height:var(--nav-h);
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--line-soft);
+}
+.nav-inner{
+  max-width:var(--wrap-wide); margin-inline:auto; padding-inline:22px;
+  height:var(--nav-h); display:flex; align-items:center; gap:8px;
+}
+.brand{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:19px; font-weight:600; color:var(--ink); letter-spacing:-.02em;
+}
+.brand:hover{text-decoration:none;}
+.brand-mark{
+  width:26px; height:26px; border-radius:7px; flex:none;
+  background:var(--accent); color:#fff;
+  display:grid; place-items:center; font-size:15px; font-weight:700;
+  font-family:var(--font-latin);
+}
+.nav-links{display:flex; align-items:center; gap:4px; margin-inline:auto;}
+.nav-links a{
+  color:var(--ink); font-size:14px; font-weight:400; opacity:.85;
+  padding:7px 12px; border-radius:8px; transition:opacity .2s var(--ease), background .2s var(--ease);
+}
+.nav-links a:hover{opacity:1; background:var(--line-soft); text-decoration:none;}
+.nav-side{display:flex; align-items:center; gap:10px; margin-inline-start:auto;}
+.nav-links + .nav-side{margin-inline-start:0;}
+.lang-toggle{
+  display:inline-flex; align-items:center; gap:6px;
+  background:transparent; border:1px solid var(--line);
+  color:var(--ink); font-family:inherit; font-size:13px; font-weight:500;
+  padding:6px 13px; border-radius:980px; cursor:pointer;
+  transition:background .2s var(--ease), border-color .2s var(--ease);
+}
+.lang-toggle:hover{background:var(--line-soft); border-color:var(--ink-3);}
+.lang-toggle svg{width:14px; height:14px; opacity:.7;}
+.nav-burger{
+  display:none; width:36px; height:36px; border:0; background:transparent;
+  cursor:pointer; align-items:center; justify-content:center; border-radius:9px;
+  color:var(--ink);
+}
+.nav-burger:hover{background:var(--line-soft);}
+.nav-burger span{
+  display:block; width:17px; height:1.5px; background:currentColor; border-radius:2px;
+  position:relative; transition:transform .28s var(--ease), opacity .2s var(--ease);
+}
+.nav-burger span::before,.nav-burger span::after{
+  content:""; position:absolute; inset-inline:0; height:1.5px; background:currentColor; border-radius:2px;
+  transition:transform .28s var(--ease);
+}
+.nav-burger span::before{top:-6px;} .nav-burger span::after{top:6px;}
+.nav-burger[aria-expanded="true"] span{transform:rotate(45deg);}
+.nav-burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(-90deg);}
+.nav-burger[aria-expanded="true"] span::after{opacity:0;}
 
-  .grid{display:grid; gap:16px;}
-  .g3{grid-template-columns:repeat(3,1fr);}
-  .g2{grid-template-columns:repeat(2,1fr);}
-  @media(max-width:820px){.g3{grid-template-columns:1fr 1fr;} }
-  @media(max-width:560px){.g3,.g2{grid-template-columns:1fr;} }
+@media (max-width:900px){
+  .nav-burger{display:inline-flex;}
+  .nav-links{
+    position:fixed; inset-block-start:var(--nav-h); inset-inline:0;
+    flex-direction:column; align-items:stretch; gap:0; margin:0;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 24px 44px -24px rgba(0,0,0,.35);
+    padding:8px 22px max(22px, env(safe-area-inset-bottom));
+    transform:translateY(-8px); opacity:0; pointer-events:none;
+    transition:opacity .24s var(--ease), transform .24s var(--ease);
+    max-height:calc(100dvh - var(--nav-h)); overflow-y:auto;
+  }
+  .nav-links.open{transform:none; opacity:1; pointer-events:auto;}
+  .nav-links a{
+    font-size:20px; font-weight:500; padding:14px 4px;
+    border-bottom:1px solid var(--line-soft); border-radius:0;
+  }
+  .nav-links a:hover{background:transparent;}
+  .nav-side{margin-inline-start:auto;}
+}
 
-  .tile{
-    background:var(--panel); border:1px solid var(--line); border-radius:6px;
-    padding:22px 20px;
-  }
-  .tile h3{font-size:17.5px; font-weight:700; color:#fff; margin-bottom:6px;}
-  .tile p{margin:0; font-size:15.5px; color:var(--silver-dim); line-height:1.8;}
-  .tile .ico{font-size:22px; line-height:1; margin-bottom:12px; display:block;}
+/* ═══ sections ═══ */
+.section{padding:clamp(72px,10vw,128px) 0;}
+.section-tight{padding:clamp(56px,7vw,88px) 0;}
+.section-alt{background:var(--surface);}
+.sec-head{max-width:44ch; margin-bottom:clamp(36px,5vw,56px);}
+.sec-head.center{margin-inline:auto; text-align:center;}
+.sec-head .t-sub{margin-top:16px;}
 
-  /* ── الخطوات ──────────────────────────────────────────────── */
-  .steps{counter-reset:st; display:grid; gap:14px; list-style:none; padding:0; margin:0;}
-  .steps li{
-    counter-increment:st; position:relative; padding:20px 74px 20px 22px;
-    background:var(--panel); border:1px solid var(--line); border-radius:6px;
-  }
-  .steps li::before{
-    content:counter(st); position:absolute; right:22px; top:19px;
-    width:36px; height:36px; border-radius:50%; display:grid; place-items:center;
-    background:var(--panel-2); border:1px solid var(--gold-deep); color:var(--gold);
-    font-weight:800; font-size:16px; font-family:var(--mono);
-  }
-  .steps li b{display:block; color:#fff; font-size:17.5px; margin-bottom:3px;}
-  .steps li span{color:var(--silver-dim); font-size:15.5px;}
+/* ═══ hero ═══ */
+.hero{
+  position:relative; overflow:hidden; text-align:center;
+  padding:clamp(56px,9vw,104px) 0 clamp(48px,7vw,72px);
+  background:var(--bg-alt);
+}
+.hero::before{
+  content:""; position:absolute; inset-block-start:-320px; inset-inline-start:50%;
+  width:1100px; height:760px; transform:translateX(-50%);
+  background:radial-gradient(closest-side, rgba(0,113,227,.14), transparent 72%);
+  pointer-events:none; z-index:0;
+}
+@media (prefers-color-scheme: dark){
+  .hero::before{background:radial-gradient(closest-side, rgba(41,151,255,.18), transparent 72%);}
+}
+.hero .wrap{position:relative; z-index:1;}
+.hero h1{margin-bottom:22px;}
+.hero h1 .grad{
+  background:linear-gradient(96deg,#0071e3,#42a1ff 52%,#8f6fff);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero .t-sub{max-width:34ch; margin-inline:auto;}
+.hero-actions{
+  display:flex; flex-wrap:wrap; gap:14px 26px;
+  align-items:center; justify-content:center; margin-top:32px;
+}
+.hero-note{margin-top:18px; font-size:14px; color:var(--ink-3);}
 
-  /* ── الأسئلة ──────────────────────────────────────────────── */
-  details{
-    background:var(--panel); border:1px solid var(--line);
-    border-radius:6px; padding:0 20px; margin:10px 0;
-  }
-  details+details{margin-top:10px;}
-  summary{
-    cursor:pointer; padding:17px 0; font-weight:700; color:#fff; font-size:16.5px;
-    list-style:none; display:flex; align-items:center; gap:10px;
-  }
-  summary::-webkit-details-marker{display:none;}
-  summary::before{content:"+"; color:var(--gold); font-family:var(--mono);
-                  font-weight:800; font-size:19px; flex:none;}
-  details[open] summary::before{content:"–";}
-  summary:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
-  details p{margin:0 0 18px; padding-inline-start:26px;
-            color:var(--silver-dim); font-size:15.5px;}
+/* ═══ trust strip ═══ */
+.trust{
+  border-block:1px solid var(--line-soft); background:var(--bg);
+  padding:26px 0;
+}
+.trust-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;
+}
+.trust-item{display:flex; flex-direction:column; align-items:center; gap:7px;}
+.trust-item svg{width:22px; height:22px; color:var(--accent-link);}
+.trust-item b{font-size:15px; font-weight:600; color:var(--ink); letter-spacing:-.012em;}
+.trust-item span{font-size:13.5px; color:var(--ink-3); line-height:1.4;}
+@media (max-width:720px){
+  .trust-grid{grid-template-columns:repeat(2,1fr); gap:26px 16px;}
+}
 
-  /* ── الخاتمة ──────────────────────────────────────────────── */
-  .final{text-align:center; padding:78px 0;}
-  .final h2{font-size:clamp(27px,4vw,40px); font-weight:800; color:#fff; margin-bottom:14px;}
-  .final p{color:var(--silver-dim); font-size:18px; margin:0 0 30px;}
-  footer{border-top:1px solid var(--line); padding:26px 0 46px; color:var(--silver-dim);
-         font-size:14.5px;}
-  footer .wrap{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
-  footer .sp{margin-inline-start:auto;}
+/* ═══ gift card visual ═══ */
+.stage{display:grid; place-items:center; margin-top:clamp(40px,6vw,64px);}
+.gcard{
+  position:relative; width:min(400px,86vw); aspect-ratio:1.586/1;
+  border-radius:20px; padding:24px; color:#fff; isolation:isolate;
+  background:linear-gradient(145deg,#3b3b40 0%,#1d1d1f 58%,#000 100%);
+  border:1px solid rgba(255,255,255,.14); direction:ltr;
+  box-shadow:0 30px 60px -26px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.14);
+  display:flex; flex-direction:column;
+}
+.gcard::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 42%);
+}
+.gcard-top{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+.gcard .chip{
+  width:44px; height:32px; border-radius:6px; flex:none;
+  background:linear-gradient(140deg,#f3dfae,#c9a45e 55%,#8f6f34);
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.28);
+}
+.gcard .brandtag{
+  font-family:var(--font-latin); font-size:13px; font-weight:600;
+  letter-spacing:.06em; color:rgba(255,255,255,.62);
+}
+.gcard .label{
+  margin-top:20px; font-size:11.5px; font-weight:600;
+  letter-spacing:.16em; color:rgba(255,255,255,.5);
+  font-family:var(--font-latin);
+}
+.gcard .title{font-size:21px; font-weight:600; margin-top:3px; letter-spacing:-.02em;}
+.scratch{
+  position:relative; margin-top:auto; height:78px; border-radius:12px;
+  overflow:hidden; background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.12);
+}
+.scratch .under{
+  position:absolute; inset:0; display:grid; place-items:center; align-content:center; gap:3px;
+  text-align:center;
+}
+.scratch .amount{
+  font-family:var(--mono); font-size:25px; font-weight:700;
+  letter-spacing:.02em; color:#fff; line-height:1.1;
+}
+.scratch .cap{font-size:12.5px; color:rgba(255,255,255,.62); font-weight:500; unicode-bidi:plaintext;}
+.scratch canvas{
+  position:absolute; inset:0; width:100%; height:100%;
+  cursor:grab; touch-action:none; display:none;
+}
+.scratch canvas.on{display:block;}
+.stage .hint{
+  margin-top:18px; font-size:14px; color:var(--ink-3); text-align:center;
+  min-height:1.4em; transition:color .3s var(--ease);
+}
+.stage .hint.done{color:var(--success); font-weight:500;}
 
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none!important; transition:none!important; scroll-behavior:auto!important;}
-    .gcard{transform:none;}
-  }
+/* ═══ bento / tiles ═══ */
+.grid{display:grid; gap:18px;}
+.g2{grid-template-columns:repeat(2,1fr);}
+.g3{grid-template-columns:repeat(3,1fr);}
+.bento{grid-template-columns:repeat(6,1fr);}
+.bento > .tile{grid-column:span 2;}
+.bento > .tile.wide{grid-column:span 4;}
+.bento > .tile.full{grid-column:span 6;}
+@media (max-width:900px){
+  .g3{grid-template-columns:repeat(2,1fr);}
+  .bento{grid-template-columns:repeat(2,1fr);}
+  .bento > .tile,.bento > .tile.wide,.bento > .tile.full{grid-column:span 1;}
+}
+@media (max-width:600px){
+  .g2,.g3,.bento{grid-template-columns:1fr;}
+}
+.tile{
+  background:var(--surface); border:1px solid var(--line-soft);
+  border-radius:var(--radius); padding:28px 26px;
+  box-shadow:var(--card-shadow);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.section-alt .tile{background:var(--bg);}
+.tile:hover{transform:translateY(-3px); box-shadow:var(--card-shadow-hi);}
+.ico{
+  width:46px; height:46px; border-radius:13px; display:grid; place-items:center;
+  background:color-mix(in srgb, var(--accent-link) 12%, transparent);
+  color:var(--accent-link); margin-bottom:18px; flex:none;
+}
+.ico svg{width:23px; height:23px;}
+.tile h3{font-size:19px; font-weight:600; margin-bottom:8px; letter-spacing:-.018em;}
+.tile p{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+.tile .meta{
+  display:inline-block; margin-top:14px; font-family:var(--mono);
+  font-size:12.5px; color:var(--ink-3); background:transparent;
+  border:1px solid var(--line); border-radius:8px; padding:4px 9px;
+  unicode-bidi:plaintext;
+}
+
+/* ═══ steps ═══ */
+.steps{list-style:none; margin:0; padding:0; display:grid; gap:14px; counter-reset:st;}
+.steps li{
+  counter-increment:st; position:relative;
+  display:flex; align-items:flex-start; gap:18px;
+  background:var(--surface); border:1px solid var(--line-soft);
+  border-radius:18px; padding:22px 24px; box-shadow:var(--card-shadow);
+}
+.section-alt .steps li{background:var(--bg);}
+.steps li::before{
+  content:counter(st); flex:none;
+  width:34px; height:34px; border-radius:50%; display:grid; place-items:center;
+  background:var(--accent); color:#fff;
+  font-family:var(--font-latin); font-size:15px; font-weight:600;
+}
+.steps li b{display:block; font-size:18px; font-weight:600; margin-bottom:4px; letter-spacing:-.016em;}
+.steps li span{font-size:15.5px; color:var(--ink-2); line-height:1.6;}
+
+/* ═══ payout split ═══ */
+.split{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+@media (max-width:820px){.split{grid-template-columns:1fr;}}
+.payout{
+  border-radius:var(--radius); padding:30px 28px; text-align:center;
+  background:var(--surface); border:1px solid var(--line-soft);
+  box-shadow:var(--card-shadow);
+}
+.section-alt .payout{background:var(--bg);}
+.payout .ico{margin-inline:auto;}
+.payout h3{font-size:19px; margin-bottom:8px;}
+.payout p{font-size:15.5px; color:var(--ink-2);}
+
+/* ═══ security panel ═══ */
+.panel{
+  border-radius:var(--radius-lg); padding:clamp(34px,5vw,60px);
+  background:linear-gradient(160deg,#1d1d1f,#000);
+  color:#f5f5f7; border:1px solid rgba(255,255,255,.1);
+  box-shadow:var(--card-shadow-hi);
+}
+.panel h2{color:#fff;}
+.panel .t-sub{color:rgba(245,245,247,.72);}
+.panel-list{
+  list-style:none; margin:32px 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:18px 30px;
+}
+@media (max-width:700px){.panel-list{grid-template-columns:1fr;}}
+.panel-list li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; color:rgba(245,245,247,.78); line-height:1.6;}
+.panel-list svg{width:20px; height:20px; flex:none; color:#30d158; margin-top:2px;}
+.panel-list b{color:#fff; font-weight:600;}
+
+/* ═══ FAQ ═══ */
+.faq{max-width:800px; margin-inline:auto;}
+.faq details{border-bottom:1px solid var(--line); }
+.faq details:first-of-type{border-top:1px solid var(--line);}
+.faq summary{
+  cursor:pointer; list-style:none; padding:22px 4px;
+  display:flex; align-items:center; gap:16px;
+  font-size:18px; font-weight:500; color:var(--ink); letter-spacing:-.015em;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary .sign{
+  margin-inline-start:auto; flex:none; width:20px; height:20px; position:relative;
+  color:var(--accent-link);
+}
+.faq summary .sign::before,.faq summary .sign::after{
+  content:""; position:absolute; inset-block-start:50%; inset-inline-start:50%;
+  width:15px; height:1.8px; background:currentColor; border-radius:2px;
+  transform:translate(-50%,-50%); transition:transform .3s var(--ease), opacity .3s var(--ease);
+}
+.faq summary .sign::after{transform:translate(-50%,-50%) rotate(90deg);}
+.faq details[open] summary .sign::after{transform:translate(-50%,-50%) rotate(0deg); opacity:0;}
+.faq details p{
+  padding:0 4px 24px; font-size:16px; color:var(--ink-2); line-height:1.65; max-width:70ch;
+}
+.faq details p + p{padding-top:0; margin-top:-10px;}
+
+/* ═══ final CTA ═══ */
+.final{text-align:center; padding:clamp(76px,10vw,124px) 0; background:var(--surface);}
+.final h2{margin-bottom:16px;}
+.final .t-sub{max-width:40ch; margin:0 auto 32px;}
+
+/* ═══ footer ═══ */
+.foot{background:var(--bg); border-top:1px solid var(--line-soft); padding:44px 0 56px; font-size:13px; color:var(--ink-3);}
+.foot-top{display:flex; flex-wrap:wrap; gap:22px 40px; align-items:flex-start; padding-bottom:26px; border-bottom:1px solid var(--line-soft);}
+.foot-nav{display:flex; flex-wrap:wrap; gap:8px 22px;}
+.foot-nav a{color:var(--ink-2); font-size:13px;}
+.foot-brand{display:flex; align-items:center; gap:8px; color:var(--ink); font-weight:600; font-size:15px;}
+.foot-bottom{padding-top:22px; display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center;}
+.foot-bottom .sp{margin-inline-start:auto;}
+.foot p.legal{max-width:78ch; line-height:1.7; margin-top:12px;}
+
+/* ═══ reveal on scroll ═══ */
+.rv{opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
+.rv.in{opacity:1; transform:none;}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important; transition-duration:.001ms!important; scroll-behavior:auto!important;}
+  .rv{opacity:1; transform:none;}
+}
 </style>
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="skip">تخطَّ إلى المحتوى</a>
 
-<header class="top">
-  <div class="wrap">
-    <span class="brand"><span class="mk">G</span> GiftXCard</span>
-    <span class="sp"></span>
-    <a class="cta sm" href="https://t.me/giftxcard_bot">افتح البوت</a>
-  </div>
-</header>
+<!-- ══════════ navigation ══════════ -->
+<header class="nav">
+  <nav class="nav-inner" aria-label="Main">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">G</span>GiftXCard</a>
 
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">آيتونز · رايزر</span>
-      <h1>عندك بطاقة؟ <em>حوّلها فلوس</em> خلال دقائق.</h1>
-      <p class="lead">أرسل الكود في تيليجرام، يفحصه النظام آلياً خلال ثوانٍ، ويزيد رصيدك بسعرك أنت. ثم تستلم مالك تحويلاً بنكياً أو USDT — ومعه الإيصال.</p>
-      <a class="cta" href="https://t.me/giftxcard_bot">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.16 9.38-8.48c.41-.36-.09-.56-.63-.2L5.79 13.03.8 11.47c-1.08-.34-1.1-1.08.23-1.6L20.5 2.72c.9-.33 1.69.2 1.4 1.58Z"/></svg>
-        ابدأ الآن على تيليجرام
-      </a>
-      <span class="cta-note">مجاني · بلا تسجيل · بلا تطبيقات إضافية</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#how" data-i18n="nav.how">كيف يعمل</a>
+      <a href="#cards" data-i18n="nav.cards">البطاقات</a>
+      <a href="#why" data-i18n="nav.why">لماذا نحن</a>
+      <a href="#payout" data-i18n="nav.payout">الاستلام</a>
+      <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
     </div>
 
-    <div class="card-stage">
+    <div class="nav-side">
+      <button class="lang-toggle" id="langBtn" type="button" data-i18n-aria="lang.aria" aria-label="التبديل إلى الإنجليزية">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/>
+        </svg>
+        <span id="langLabel">English</span>
+      </button>
+      <a class="btn btn-sm" href="https://t.me/giftxcard_bot" data-i18n="nav.cta">افتح البوت</a>
+      <button class="nav-burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" data-i18n-aria="nav.menu" aria-label="القائمة"><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ══════════ hero ══════════ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="hero.eyebrow">آيتونز · رايزر جولد</span>
+    <h1 class="t-hero" data-i18n="hero.title" data-i18n-html>بطاقتك. مالك.<br><span class="grad">خلال دقائق.</span></h1>
+    <p class="t-sub" data-i18n="hero.sub">أرسل الكود على تيليجرام. يفحصه النظام آلياً خلال ثوانٍ، ويزيد رصيدك بالسعر الذي رأيته قبل الإرسال.</p>
+
+    <div class="hero-actions">
+      <a class="btn" href="https://t.me/giftxcard_bot">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.16 9.38-8.48c.41-.36-.09-.56-.63-.2L5.79 13.03.8 11.47c-1.08-.34-1.1-1.08.23-1.6L20.5 2.72c.9-.33 1.69.2 1.4 1.58Z"/></svg>
+        <span data-i18n="hero.cta">ابدأ الآن على تيليجرام</span>
+      </a>
+      <a class="arrow-link" href="#how" data-i18n="hero.learn">شاهد كيف يعمل</a>
+    </div>
+    <p class="hero-note" data-i18n="hero.note">مجاني · بلا تسجيل · بلا تطبيقات إضافية</p>
+
+    <!-- gift card -->
+    <div class="stage">
       <div>
         <div class="gcard">
-          <div class="chip"></div>
+          <div class="gcard-top">
+            <span class="chip" aria-hidden="true"></span>
+            <span class="brandtag">GiftXCard</span>
+          </div>
           <div class="label">GIFT CARD</div>
-          <div class="title">iTunes · Razer</div>
+          <div class="title">iTunes · Razer Gold</div>
           <div class="scratch">
             <div class="under">
-              100$
-              <small>قيمة بطاقتك — نقداً</small>
+              <span class="amount">$100</span>
+              <span class="cap" data-i18n="card.caption">قيمة بطاقتك — نقداً</span>
             </div>
             <canvas id="sc" aria-hidden="true"></canvas>
           </div>
         </div>
-        <p class="hint" id="hint">اكشط الشريط بإصبعك أو بالفأرة</p>
+        <p class="hint" id="hint" data-i18n="card.hint">اكشط الشريط بإصبعك أو بالفأرة</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ trust strip ══════════ -->
+<div class="trust">
+  <div class="wrap wrap-wide">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg>
+        <b data-i18n="trust.1.t">فحص خلال ثوانٍ</b>
+        <span data-i18n="trust.1.d">تحقّق آلي لحظة وصول الكود</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+        <b data-i18n="trust.2.t">سعر ثابت مسبقاً</b>
+        <span data-i18n="trust.2.d">تعرف مقدار ما ستقبضه قبل الإرسال</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3H5Z"/><path d="M9 8h6M9 12h6"/></svg>
+        <b data-i18n="trust.3.t">إيصال لكل دفعة</b>
+        <span data-i18n="trust.3.d">صورة التحويل تصلك مع المال</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <b data-i18n="trust.4.t">كودك لا يُشارَك</b>
+        <span data-i18n="trust.4.d">يُستعمل للفحص والتعبئة فقط</span>
       </div>
     </div>
   </div>
 </div>
 
-<section id="how">
+<!-- ══════════ how it works ══════════ -->
+<section class="section section-alt" id="how">
   <div class="wrap">
-    <div class="sechead">
-      <h2>خمس خطوات من الكود إلى المال</h2>
-      <p>لا أوراق ولا مواعيد. كل شيء داخل محادثة تيليجرام واحدة.</p>
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="how.eyebrow">كيف يعمل</span>
+      <h2 class="t-sec" data-i18n="how.title">خمس خطوات من الكود إلى المال.</h2>
+      <p class="t-sub" data-i18n="how.sub">لا أوراق ولا مواعيد ولا انتظار. كل شيء داخل محادثة تيليجرام واحدة.</p>
     </div>
-    <ol class="steps">
-      <li><b>أرسل الكود</b><span>الصقه في المحادثة مباشرة، أو اختر نوع البطاقة وفئتها ثم أرسله.</span></li>
-      <li><b>ينتهي الفحص</b><span>يتحقّق النظام من البطاقة آلياً ويصلك إشعار بالنتيجة — قبولاً أو سبب الرفض.</span></li>
-      <li><b>يزيد رصيدك</b><span>بسعرك أنت، وتراه لحظياً في 💼 المحفظة.</span></li>
-      <li><b>احفظ طريقة الدفع</b><span>مرّة واحدة فقط: حساب بنكي، أو محفظة USDT، أو إهداء لصديق.</span></li>
-      <li><b>اطلب التصفير</b><span>يصلك المال ومعه صورة الإيصال.</span></li>
+    <ol class="steps rv">
+      <li><div><b data-i18n="how.1.t">أرسل الكود</b><span data-i18n="how.1.d">الصقه في المحادثة مباشرة، أو اختر نوع البطاقة وفئتها ثم أرسله.</span></div></li>
+      <li><div><b data-i18n="how.2.t">ينتهي الفحص</b><span data-i18n="how.2.d">يتحقّق النظام من البطاقة آلياً ويصلك إشعار بالنتيجة — قبولاً أو سبب الرفض.</span></div></li>
+      <li><div><b data-i18n="how.3.t">يزيد رصيدك</b><span data-i18n="how.3.d">بالسعر المعروض لك، وتراه لحظياً في محفظتك داخل البوت.</span></div></li>
+      <li><div><b data-i18n="how.4.t">احفظ طريقة الاستلام</b><span data-i18n="how.4.d">مرّة واحدة فقط: حساب بنكي، أو محفظة USDT، أو إهداء الرصيد لصديق.</span></div></li>
+      <li><div><b data-i18n="how.5.t">اطلب التصفير</b><span data-i18n="how.5.d">يصلك المال ومعه صورة الإيصال.</span></div></li>
     </ol>
   </div>
 </section>
 
-<section id="cards">
+<!-- ══════════ cards we buy ══════════ -->
+<section class="section" id="cards">
   <div class="wrap">
-    <div class="sechead">
-      <h2>ماذا نشتري</h2>
-      <p>بطاقات آيتونز بعملاتها المختلفة، وبطاقات رايزر جولد.</p>
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="cards.eyebrow">البطاقات المقبولة</span>
+      <h2 class="t-sec" data-i18n="cards.title">ماذا نشتري.</h2>
+      <p class="t-sub" data-i18n="cards.sub">بطاقات آيتونز بعملاتها المختلفة، وبطاقات رايزر جولد.</p>
     </div>
-    <div class="grid g3">
-      <div class="tile"><span class="ico">🍎</span><h3>آيتونز أمريكية</h3><p>الفئة الأكثر طلباً. كود من ١٦ خانة يبدأ بحرف X.</p></div>
-      <div class="tile"><span class="ico">🌍</span><h3>آيتونز بعملات أخرى</h3><p>سعودية · إماراتية · تركية · يورو.</p></div>
-      <div class="tile"><span class="ico">🎮</span><h3>رايزر جولد</h3><p>كود من ١٤ خانة، أحرفاً وأرقاماً.</p></div>
+    <div class="grid g3 rv">
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.15-2.8.85-3.5.85s-1.8-.83-3-.8c-1.5.02-2.9.9-3.7 2.25-1.6 2.75-.4 6.8 1.1 9 .75 1.1 1.6 2.3 2.8 2.25 1.1-.05 1.5-.7 2.9-.7s1.7.7 2.9.7c1.2-.02 2-1.1 2.7-2.2.85-1.25 1.2-2.5 1.2-2.55-.03-.02-2.3-.9-2.3-3.5Zm-2.3-6.4c.6-.75 1-1.8.9-2.85-.9.04-2 .6-2.65 1.35-.57.65-1.07 1.7-.94 2.7 1 .08 2.02-.5 2.7-1.2Z"/></svg></span>
+        <h3 data-i18n="cards.1.t">آيتونز أمريكية</h3>
+        <p data-i18n="cards.1.d">الفئة الأكثر طلباً وأعلى سعراً لدينا.</p>
+        <span class="meta" data-i18n="cards.1.m">١٦ خانة · تبدأ بحرف X</span>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></span>
+        <h3 data-i18n="cards.2.t">آيتونز بعملات أخرى</h3>
+        <p data-i18n="cards.2.d">سعودية · إماراتية · تركية · يورو.</p>
+        <span class="meta" data-i18n="cards.2.m">ريال · درهم · ليرة · يورو</span>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M16 12.5h.01M18.5 11h.01"/></svg></span>
+        <h3 data-i18n="cards.3.t">رايزر جولد</h3>
+        <p data-i18n="cards.3.d">جميع الفئات المتداولة، بنفس آلية الفحص الآلي.</p>
+        <span class="meta" data-i18n="cards.3.m">١٤ خانة · أحرف وأرقام</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="why">
+<!-- ══════════ why ══════════ -->
+<section class="section section-alt" id="why">
   <div class="wrap">
-    <div class="sechead">
-      <h2>لماذا عبر البوت</h2>
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="why.eyebrow">لماذا نحن</span>
+      <h2 class="t-sec" data-i18n="why.title">مصمَّم ليكون واضحاً من أول ثانية.</h2>
+      <p class="t-sub" data-i18n="why.sub">لا مساومة على السعر، ولا انتظار ردّ بشري، ولا مبلغ يخرج بلا أثر.</p>
     </div>
-    <div class="grid g2">
-      <div class="tile"><span class="ico">⚡</span><h3>فحص آلي بثوانٍ</h3><p>لا انتظار ردّ بشري. البطاقة تُفحص لحظة وصولها وتصلك النتيجة فوراً.</p></div>
-      <div class="tile"><span class="ico">🏷️</span><h3>سعرك واضح قبل الإرسال</h3><p>تعرف كم ستقبض قبل أن ترسل أي كود، ولا تتغيّر القيمة بعدها.</p></div>
-      <div class="tile"><span class="ico">🧾</span><h3>إيصال مع كل دفعة</h3><p>كل تحويل يصلك ومعه صورة إيصاله. لا مبلغ يخرج بلا أثر.</p></div>
-      <div class="tile"><span class="ico">🔒</span><h3>كودك لا يُنشر</h3><p>يُستعمل الكود للفحص والتعبئة فقط، ولا يُشارك مع أي طرف.</p></div>
-      <div class="tile"><span class="ico">💳</span><h3>بنك أو USDT</h3><p>استلم بالدينار تحويلاً بنكياً، أو USDT على الشبكة التي تختارها.</p></div>
-      <div class="tile"><span class="ico">📦</span><h3>أكواد متعددة دفعة واحدة</h3><p>عندك عشرة أكواد؟ أرسلها في رسالة واحدة وتُعالَج معاً.</p></div>
+    <div class="grid bento rv">
+      <div class="tile wide">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg></span>
+        <h3 data-i18n="why.1.t">فحص آلي بثوانٍ</h3>
+        <p data-i18n="why.1.d">لا انتظار ردّ بشري ولا ساعات عمل. البطاقة تُفحص لحظة وصولها وتصلك النتيجة فوراً، ليلاً أو نهاراً.</p>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+        <h3 data-i18n="why.2.t">سعرك واضح قبل الإرسال</h3>
+        <p data-i18n="why.2.d">تعرف كم ستقبض قبل أن ترسل أي كود، والقيمة لا تتغيّر بعد القبول.</p>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2.5-1.6L10 21l2-1.6L14 21l2.5-1.6L19 21V3H5Z"/><path d="M9 8h6M9 12h6"/></svg></span>
+        <h3 data-i18n="why.3.t">إيصال مع كل دفعة</h3>
+        <p data-i18n="why.3.d">كل تحويل يصلك ومعه صورة إيصاله.</p>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+        <h3 data-i18n="why.4.t">كودك لا يُنشر</h3>
+        <p data-i18n="why.4.d">يُستعمل للفحص والتعبئة فقط، ولا يُشارك مع أي طرف.</p>
+      </div>
+      <div class="tile">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8H3M3 12h4M16.5 3.5 21 8l-4.5 4.5"/><path d="M3 16h18M7.5 11.5 3 16l4.5 4.5"/></svg></span>
+        <h3 data-i18n="why.5.t">بنك أو USDT</h3>
+        <p data-i18n="why.5.d">استلم تحويلاً بنكياً، أو USDT على الشبكة التي تختارها.</p>
+      </div>
+      <div class="tile full">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg></span>
+        <h3 data-i18n="why.6.t">أكواد متعددة دفعة واحدة</h3>
+        <p data-i18n="why.6.d">أرسل عشرة أكواد في رسالة واحدة وتُعالَج معاً.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<!-- ══════════ payout ══════════ -->
+<section class="section" id="payout">
   <div class="wrap">
-    <div class="sechead"><h2>أسئلة سريعة</h2></div>
-
-    <details open>
-      <summary>لا أعرف قيمة بطاقتي — ماذا أفعل؟</summary>
-      <p>أرسل الكود واضغط «لا أعرف فئة البطاقة». النظام يقرأ القيمة بنفسه ويخبرك بها.</p>
-    </details>
-    <details>
-      <summary>كم يستغرق حتى أستلم المال؟</summary>
-      <p>الفحص خلال ثوانٍ ويزيد رصيدك فوراً. أمّا صرف الرصيد فيتمّ عند طلبك للتصفير، ويصلك المال مع إيصاله.</p>
-    </details>
-    <details>
-      <summary>أرسلت كوداً وظهر خطأ في عدد الخانات</summary>
-      <p>الشكلان المقبولان اثنان فقط: آيتونز ١٦ خانة تبدأ بحرف <b>X</b>، ورايزر ١٤ خانة. خانة واحدة زائدة أو ناقصة تُعطّل الكود — راجعه على البطاقة وأعد إرساله.</p>
-    </details>
-    <details>
-      <summary>ماذا لو كانت البطاقة مستعملة؟</summary>
-      <p>يخبرك النظام بذلك صراحةً ولا يُخصم منك شيء. وإن كانت البطاقة سليمة لكنها غير مطلوبة لدينا، تبقى بحوزتك كما هي ولم نمسّها.</p>
-    </details>
-    <details>
-      <summary>هل أحتاج حساباً أو تطبيقاً؟</summary>
-      <p>لا. يكفي حسابك على تيليجرام. اضغط الزر، ابدأ المحادثة، وأرسل كودك.</p>
-    </details>
+    <div class="sec-head center rv">
+      <span class="eyebrow" data-i18n="pay.eyebrow">الاستلام</span>
+      <h2 class="t-sec" data-i18n="pay.title">استلم بالطريقة التي تناسبك.</h2>
+      <p class="t-sub" data-i18n="pay.sub">تُحفَظ طريقة الاستلام مرّة واحدة، ثم يكفي طلب التصفير في كل مرة.</p>
+    </div>
+    <div class="split rv">
+      <div class="payout">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg></span>
+        <h3 data-i18n="pay.1.t">تحويل بنكي</h3>
+        <p data-i18n="pay.1.d">إلى حسابك المحفوظ، ومعه صورة الإيصال.</p>
+      </div>
+      <div class="payout">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.2 9.4h5.6M9.2 14.6h5.6"/></svg></span>
+        <h3 data-i18n="pay.2.t">USDT</h3>
+        <p data-i18n="pay.2.d">على الشبكة التي تختارها، إلى محفظتك مباشرة.</p>
+      </div>
+      <div class="payout">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13"/><path d="M12 8S10.5 3 8 3.5 7 8 12 8Zm0 0s1.5-5 4-4.5S17 8 12 8Z"/></svg></span>
+        <h3 data-i18n="pay.3.t">إهداء لصديق</h3>
+        <p data-i18n="pay.3.d">حوّل رصيدك إلى حساب صديق داخل البوت.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="final">
+<!-- ══════════ security panel ══════════ -->
+<section class="section-tight">
   <div class="wrap">
-    <h2>بطاقتك تساوي فلوساً الآن</h2>
-    <p>افتح البوت وأرسل كودك — الباقي آلي.</p>
-    <a class="cta" href="https://t.me/giftxcard_bot">
+    <div class="panel rv">
+      <span class="eyebrow" style="color:#2997ff" data-i18n="sec.eyebrow">الأمان والخصوصية</span>
+      <h2 class="t-sec" data-i18n="sec.title">تعاملك محفوظ، وخطواته موثّقة.</h2>
+      <p class="t-sub" data-i18n="sec.sub">كل مرحلة تترك أثراً تستطيع الرجوع إليه داخل المحادثة.</p>
+      <ul class="panel-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span data-i18n="sec.1" data-i18n-html><b>الكود لا يُشارَك.</b> يُستعمل للفحص والتعبئة فقط، ولا يُعاد إرساله إلى أي طرف ثالث.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span data-i18n="sec.2" data-i18n-html><b>سجلّ كامل في المحادثة.</b> كل عملية فحص وكل تصفير يبقى مكتوباً أمامك في تيليجرام.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span data-i18n="sec.3" data-i18n-html><b>لا خصم عند الرفض.</b> إن كانت البطاقة مستعملة أو غير مقبولة، تبقى بحوزتك ولا يُخصم منك شيء.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+          <span data-i18n="sec.4" data-i18n-html><b>بلا تسجيل ولا مستندات.</b> حساب تيليجرام يكفي — لا نطلب هويّة ولا بيانات إضافية.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow" data-i18n="faq.eyebrow">الأسئلة الشائعة</span>
+      <h2 class="t-sec" data-i18n="faq.title">أسئلة سريعة.</h2>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary><span data-i18n="faq.1.q">لا أعرف قيمة بطاقتي — ماذا أفعل؟</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.1.a">أرسل الكود واختر «لا أعرف فئة البطاقة». النظام يقرأ القيمة بنفسه ويخبرك بها قبل أي خطوة أخرى.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.2.q">كم يستغرق حتى أستلم المال؟</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.2.a">الفحص يتمّ خلال ثوانٍ ويزيد رصيدك فوراً. أمّا صرف الرصيد فيتمّ عند طلبك للتصفير، ويصلك المال مع صورة إيصاله.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.3.q">أرسلت كوداً وظهر خطأ في عدد الخانات</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.3.a" data-i18n-html>الشكلان المقبولان اثنان فقط: آيتونز من ١٦ خانة تبدأ بحرف <b>X</b>، ورايزر من ١٤ خانة. خانة واحدة زائدة أو ناقصة تُعطّل الكود — راجعه على البطاقة وأعد إرساله.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.4.q">ماذا لو كانت البطاقة مستعملة؟</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.4.a">يخبرك النظام بذلك صراحةً ولا يُخصم منك شيء. وإن كانت البطاقة سليمة لكنها غير مطلوبة لدينا، تبقى بحوزتك كما هي ولم نمسّها.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.5.q">هل أحتاج حساباً أو تطبيقاً إضافياً؟</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.5.a">لا. يكفي حسابك على تيليجرام. اضغط الزر، ابدأ المحادثة، وأرسل كودك.</p>
+      </details>
+      <details>
+        <summary><span data-i18n="faq.6.q">هل يمكنني إرسال أكثر من بطاقة؟</span><span class="sign" aria-hidden="true"></span></summary>
+        <p data-i18n="faq.6.a">نعم. ضع الأكواد في رسالة واحدة، كل كود في سطر، وتُفحَص جميعاً وتصلك نتيجة كل واحد منها على حدة.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ final CTA ══════════ -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="t-sec" data-i18n="final.title">بطاقتك تساوي مالاً الآن.</h2>
+    <p class="t-sub" data-i18n="final.sub">افتح البوت وأرسل كودك — الباقي آلي.</p>
+    <a class="btn" href="https://t.me/giftxcard_bot">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.16 9.38-8.48c.41-.36-.09-.56-.63-.2L5.79 13.03.8 11.47c-1.08-.34-1.1-1.08.23-1.6L20.5 2.72c.9-.33 1.69.2 1.4 1.58Z"/></svg>
-      t.me/giftxcard_bot
+      <span>t.me/giftxcard_bot</span>
     </a>
   </div>
-</div>
+</section>
+</main>
 
-<footer>
-  <div class="wrap">
-    <span>© GiftXCard</span>
-    <span class="sp"></span>
-    <a href="https://t.me/giftxcard_bot">البوت على تيليجرام</a>
+<!-- ══════════ footer ══════════ -->
+<footer class="foot">
+  <div class="wrap wrap-wide">
+    <div class="foot-top">
+      <span class="foot-brand"><span class="brand-mark" aria-hidden="true">G</span>GiftXCard</span>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#how" data-i18n="nav.how">كيف يعمل</a>
+        <a href="#cards" data-i18n="nav.cards">البطاقات</a>
+        <a href="#why" data-i18n="nav.why">لماذا نحن</a>
+        <a href="#payout" data-i18n="nav.payout">الاستلام</a>
+        <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
+        <a href="https://t.me/giftxcard_bot" data-i18n="foot.bot">البوت على تيليجرام</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> GiftXCard</span>
+      <span class="sp"></span>
+      <a href="https://t.me/giftxcard_bot">t.me/giftxcard_bot</a>
+    </div>
+    <p class="legal" data-i18n="foot.legal">GiftXCard خدمة مستقلة، وليست تابعة لشركة Apple Inc. أو Razer Inc. ولا معتمدة أو مرعيّة من أيٍّ منهما. الأسماء والعلامات التجارية الواردة ملك أصحابها.</p>
   </div>
 </footer>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"GiftXCard",
+  "url":"https://giftxcard.me/",
+  "inLanguage":["ar","en"],
+  "description":"Sell iTunes and Razer Gold gift cards through a Telegram bot: automatic checking in seconds, a price you see before you send, and bank or USDT payout with a receipt."
+}
+</script>
+
 <script>
+/* ═══════════════════════════════════════════════════════════
+   1. Bilingual engine (AR default in markup, EN from dictionary)
+   ═══════════════════════════════════════════════════════════ */
+(function(){
+  var EN = {
+    "meta.title":"GiftXCard — Sell iTunes & Razer gift cards, get paid",
+    "meta.desc":"Sell iTunes and Razer Gold gift cards at a fair rate. Automatic checking in seconds, a price you see before you send, and a bank or USDT payout with a receipt.",
+
+    "skip":"Skip to content",
+    "nav.how":"How it works",
+    "nav.cards":"Cards",
+    "nav.why":"Why us",
+    "nav.payout":"Getting paid",
+    "nav.faq":"FAQ",
+    "nav.cta":"Open the bot",
+    "nav.menu":"Menu",
+    "lang.aria":"Switch to Arabic",
+
+    "hero.eyebrow":"iTunes · Razer Gold",
+    "hero.title":"Your card. Your cash.<br><span class=\"grad\">In minutes.</span>",
+    "hero.sub":"Send the code on Telegram. It is checked automatically in seconds, and your balance goes up at the rate you saw before sending.",
+    "hero.cta":"Start on Telegram",
+    "hero.learn":"See how it works",
+    "hero.note":"Free · No sign-up · No extra apps",
+    "card.caption":"What your card is worth — in cash",
+    "card.hint":"Scratch the strip with your finger or mouse",
+    "card.done":"Exactly like this inside the bot — send the code and the value appears.",
+
+    "trust.1.t":"Checked in seconds",
+    "trust.1.d":"Automatic verification the moment your code arrives",
+    "trust.2.t":"Rate fixed up front",
+    "trust.2.d":"You know what you get before you send",
+    "trust.3.t":"A receipt every time",
+    "trust.3.d":"The transfer slip comes with your money",
+    "trust.4.t":"Your code stays private",
+    "trust.4.d":"Used only to check and redeem the card",
+
+    "how.eyebrow":"How it works",
+    "how.title":"Five steps from code to cash.",
+    "how.sub":"No paperwork, no appointments, no waiting. All of it inside one Telegram chat.",
+    "how.1.t":"Send the code",
+    "how.1.d":"Paste it straight into the chat, or pick the card type and denomination first.",
+    "how.2.t":"The check completes",
+    "how.2.d":"The system verifies the card automatically and tells you the result — accepted, or exactly why not.",
+    "how.3.t":"Your balance goes up",
+    "how.3.d":"At the rate you were quoted, visible instantly in your wallet inside the bot.",
+    "how.4.t":"Save a payout method",
+    "how.4.d":"Once only: a bank account, a USDT wallet, or a transfer to a friend.",
+    "how.5.t":"Request the payout",
+    "how.5.d":"The money reaches you together with a picture of the receipt.",
+
+    "cards.eyebrow":"Accepted cards",
+    "cards.title":"What we buy.",
+    "cards.sub":"iTunes cards in their various currencies, and Razer Gold.",
+    "cards.1.t":"US iTunes",
+    "cards.1.d":"The most requested type, and the one we pay most for.",
+    "cards.1.m":"16 digits · starts with X",
+    "cards.2.t":"iTunes in other currencies",
+    "cards.2.d":"Saudi · Emirati · Turkish · Euro.",
+    "cards.2.m":"SAR · AED · TRY · EUR",
+    "cards.3.t":"Razer Gold",
+    "cards.3.d":"All common denominations, through the same automatic check.",
+    "cards.3.m":"14 characters · letters & digits",
+
+    "why.eyebrow":"Why us",
+    "why.title":"Built to be clear from the first second.",
+    "why.sub":"No haggling over the rate, no waiting for a human reply, and no payment without a trace.",
+    "why.1.t":"Automatic check in seconds",
+    "why.1.d":"No human reply to wait for and no office hours. The card is checked the moment it arrives and the result reaches you immediately, day or night.",
+    "why.2.t":"Your rate is clear before you send",
+    "why.2.d":"You know what you will be paid before sending any code, and the amount does not change after acceptance.",
+    "why.3.t":"A receipt with every payout",
+    "why.3.d":"Every transfer arrives with a picture of its receipt.",
+    "why.4.t":"Your code is never published",
+    "why.4.d":"It is used to check and redeem the card only, and shared with nobody.",
+    "why.5.t":"Bank or USDT",
+    "why.5.d":"Take a bank transfer, or USDT on the network you choose.",
+    "why.6.t":"Many codes at once",
+    "why.6.d":"Send ten codes in a single message and they are processed together.",
+
+    "pay.eyebrow":"Getting paid",
+    "pay.title":"Take your money the way that suits you.",
+    "pay.sub":"Your payout method is saved once — after that, a payout request is all it takes.",
+    "pay.1.t":"Bank transfer",
+    "pay.1.d":"To your saved account, with the receipt attached.",
+    "pay.2.t":"USDT",
+    "pay.2.d":"On the network you choose, straight to your wallet.",
+    "pay.3.t":"Send to a friend",
+    "pay.3.d":"Move your balance to a friend's account inside the bot.",
+
+    "sec.eyebrow":"Security & privacy",
+    "sec.title":"Your transaction is protected, and every step is on the record.",
+    "sec.sub":"Each stage leaves a trace you can go back to inside the chat.",
+    "sec.1":"<b>Your code is not shared.</b> It is used to check and redeem the card only, and never passed on to a third party.",
+    "sec.2":"<b>A full record in the chat.</b> Every check and every payout stays written in front of you on Telegram.",
+    "sec.3":"<b>Nothing is deducted on rejection.</b> If a card is already used or not accepted, it stays yours and you are charged nothing.",
+    "sec.4":"<b>No sign-up, no documents.</b> A Telegram account is enough — we ask for no ID and no extra details.",
+
+    "faq.eyebrow":"Frequently asked",
+    "faq.title":"Quick answers.",
+    "faq.1.q":"I don't know what my card is worth — what now?",
+    "faq.1.a":"Send the code and choose “I don't know the denomination”. The system reads the value itself and tells you before anything else happens.",
+    "faq.2.q":"How long until I get my money?",
+    "faq.2.a":"The check takes seconds and your balance goes up immediately. Cashing that balance out happens when you request a payout, and the money arrives with a picture of its receipt.",
+    "faq.3.q":"I sent a code and got a length error",
+    "faq.3.a":"Only two formats are accepted: iTunes, 16 characters starting with <b>X</b>, and Razer, 14 characters. One character too many or too few breaks the code — check it against the card and send it again.",
+    "faq.4.q":"What if the card has already been used?",
+    "faq.4.a":"The system tells you so plainly and nothing is deducted. And if the card is valid but not one we buy, it stays exactly as it is — untouched.",
+    "faq.5.q":"Do I need an account or another app?",
+    "faq.5.a":"No. Your Telegram account is enough. Press the button, start the chat, and send your code.",
+    "faq.6.q":"Can I send more than one card?",
+    "faq.6.a":"Yes. Put the codes in one message, one per line. They are all checked and you get a separate result for each.",
+
+    "final.title":"Your card is worth money right now.",
+    "final.sub":"Open the bot and send your code — the rest is automatic.",
+
+    "foot.bot":"The bot on Telegram",
+    "foot.legal":"GiftXCard is an independent service. It is not affiliated with, endorsed by, or sponsored by Apple Inc. or Razer Inc. All names and trademarks are the property of their respective owners."
+  };
+
+  var AR = {};                       // harvested from the markup below
+  var html = document.documentElement;
+  var nodes = document.querySelectorAll('[data-i18n]');
+  var ariaNodes = document.querySelectorAll('[data-i18n-aria]');
+  var desc = document.querySelector('meta[name="description"]');
+
+  // ── harvest the Arabic source of truth straight from the DOM
+  nodes.forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    AR[k] = el.hasAttribute('data-i18n-html') ? el.innerHTML : el.textContent;
+  });
+  ariaNodes.forEach(function(el){
+    AR[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label') || '';
+  });
+  AR['meta.title'] = document.title;
+  AR['meta.desc']  = desc ? desc.getAttribute('content') : '';
+  AR['card.done']  = 'وهكذا تماماً داخل البوت — أرسل الكود وتظهر القيمة.';
+
+  var DICT = { ar:AR, en:EN };
+  var lang = 'ar';
+
+  window.t = function(key){
+    var d = DICT[lang] || AR;
+    return (d && d[key] != null) ? d[key] : (AR[key] != null ? AR[key] : key);
+  };
+
+  function apply(next){
+    var d = DICT[next]; if(!d) return;
+    lang = next;
+
+    html.setAttribute('lang', next);
+    html.setAttribute('dir', next === 'ar' ? 'rtl' : 'ltr');
+
+    nodes.forEach(function(el){
+      var v = d[el.getAttribute('data-i18n')];
+      if(v == null) return;
+      if(el.hasAttribute('data-i18n-html')) el.innerHTML = v;
+      else el.textContent = v;
+    });
+    ariaNodes.forEach(function(el){
+      var v = d[el.getAttribute('data-i18n-aria')];
+      if(v != null) el.setAttribute('aria-label', v);
+    });
+
+    if(d['meta.title']) document.title = d['meta.title'];
+    if(desc && d['meta.desc']) desc.setAttribute('content', d['meta.desc']);
+
+    var label = document.getElementById('langLabel');
+    if(label) label.textContent = next === 'ar' ? 'English' : 'العربية';
+
+    try{ localStorage.setItem('gxc-lang', next); }catch(e){}
+    document.dispatchEvent(new CustomEvent('langchange', {detail:{lang:next}}));
+  }
+
+  // ── initial language: saved choice, else the browser's preference
+  var start = 'ar';
+  try{
+    var saved = localStorage.getItem('gxc-lang');
+    if(saved === 'ar' || saved === 'en') start = saved;
+    else if(!/^ar\b/i.test(navigator.language || '')) start = 'en';
+  }catch(e){}
+  if(start !== 'ar') apply(start);
+  else { var l = document.getElementById('langLabel'); if(l) l.textContent = 'English'; }
+
+  var btn = document.getElementById('langBtn');
+  if(btn) btn.addEventListener('click', function(){ apply(lang === 'ar' ? 'en' : 'ar'); });
+})();
+
+/* ═══ 2. Mobile menu ═══ */
+(function(){
+  var burger = document.getElementById('burger'),
+      links  = document.getElementById('navLinks');
+  if(!burger || !links) return;
+
+  function close(){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e){ if(e.target.tagName === 'A') close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 900) close(); });
+})();
+
+/* ═══ 3. Reveal on scroll ═══ */
+(function(){
+  var items = document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:.08});
+  items.forEach(function(el){ io.observe(el); });
+})();
+
+/* ═══ 4. Current year ═══ */
+(function(){
+  var y = document.getElementById('yr');
+  if(y) y.textContent = new Date().getFullYear();
+})();
+
+/* ═══ 5. Scratch-to-reveal card ═══ */
 (function(){
   var cv = document.getElementById('sc'), hint = document.getElementById('hint');
-  if(!cv || !cv.getContext) { if(hint) hint.textContent = ''; return; }
+  if(!cv || !cv.getContext){ if(hint) hint.textContent = ''; return; }
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    if(hint) hint.textContent = '';
-    return;                       // الطبقة لا تُعرض أصلاً ⇒ القيمة ظاهرة
+    if(hint) hint.textContent = '';       // the layer never paints ⇒ value already visible
+    return;
   }
+
   var ctx = cv.getContext('2d'), box = cv.parentNode, done = false, drawing = false;
 
   function paint(){
     var r = box.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
-    cv.width = Math.max(1, Math.round(r.width * dpr));
+    cv.width  = Math.max(1, Math.round(r.width  * dpr));
     cv.height = Math.max(1, Math.round(r.height * dpr));
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
     var g = ctx.createLinearGradient(0, 0, r.width, r.height);
-    g.addColorStop(0,   '#8e8598');
-    g.addColorStop(.35, '#c9c2d2');
-    g.addColorStop(.55, '#9d94a8');
-    g.addColorStop(1,   '#6f6779');
+    g.addColorStop(0,   '#b9b9c0');
+    g.addColorStop(.35, '#e6e6ea');
+    g.addColorStop(.55, '#c2c2c9');
+    g.addColorStop(1,   '#9a9aa2');
     ctx.globalCompositeOperation = 'source-over';
     ctx.fillStyle = g; ctx.fillRect(0, 0, r.width, r.height);
-    ctx.fillStyle = 'rgba(255,255,255,.10)';
-    for(var i = 0; i < 260; i++){
-      ctx.fillRect(Math.random()*r.width, Math.random()*r.height, 1.4, 1.4);
+
+    ctx.fillStyle = 'rgba(255,255,255,.35)';
+    for(var i = 0; i < 300; i++){
+      ctx.fillRect(Math.random()*r.width, Math.random()*r.height, 1.3, 1.3);
     }
-    ctx.fillStyle = 'rgba(30,20,40,.55)';
-    ctx.font = '600 13px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('اكشط هنا', r.width/2, r.height/2 + 4);
     cv.classList.add('on');
   }
 
   function at(e){
-    var r = cv.getBoundingClientRect();
-    var p = e.touches ? e.touches[0] : e;
-    return { x: p.clientX - r.left, y: p.clientY - r.top };
+    var r = cv.getBoundingClientRect(), p = e.touches ? e.touches[0] : e;
+    return { x:p.clientX - r.left, y:p.clientY - r.top };
   }
 
   function scrape(e){
     if(!drawing || done) return;
     var p = at(e);
     ctx.globalCompositeOperation = 'destination-out';
-    ctx.beginPath(); ctx.arc(p.x, p.y, 21, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(p.x, p.y, 22, 0, Math.PI*2); ctx.fill();
     if(e.cancelable) e.preventDefault();
   }
 
   function cleared(){
-    // عيّنة متباعدة تكفي — قراءة كل بكسل عند كل حركة إسرافٌ بلا فائدة
+    // a spaced sample is enough — reading every pixel on every move buys nothing
     var d = ctx.getImageData(0, 0, cv.width, cv.height).data, clear = 0, n = 0;
     for(var i = 3; i < d.length; i += 4 * 220){ n++; if(d[i] < 18) clear++; }
-    return n && clear / n > .58;
+    return n && clear / n > .55;
   }
 
   function reveal(){
     done = true;
-    cv.style.transition = 'opacity .45s ease';
+    cv.style.transition = 'opacity .5s cubic-bezier(.4,0,.2,1)';
     cv.style.opacity = '0';
-    setTimeout(function(){ cv.classList.remove('on'); }, 460);
-    if(hint) hint.textContent = 'وهكذا تماماً داخل البوت — أرسل الكود وتظهر القيمة.';
+    setTimeout(function(){ cv.classList.remove('on'); }, 520);
+    if(hint){
+      hint.textContent = window.t ? window.t('card.done') : '';
+      hint.classList.add('done');
+      hint.setAttribute('data-i18n','card.done');   // keeps the reveal text across a language switch
+    }
   }
 
   function up(){
